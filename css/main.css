@@ -1,0 +1,61 @@
+.logoHonguito{
+    width: 30%;
+}
+
+.foto1 {
+    width: 40%;
+}
+
+
+.foto2 {
+    width: 40%;
+}
+
+.foto3{
+    width: 40%;
+    margin: 1rem;
+}
+
+.foto4 {
+    width: 40%;
+    margin: 1rem;
+}
+
+.foto5 {
+    width: 40%;
+    margin: 1rem;
+}
+
+
+header{
+    background-color: #CCA77Aff;
+}
+
+hr {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+    color: black;
+}
+
+footer{
+    background-color: #CCA77Aff;
+}
+
+
+.twitterIcon{
+    width: 7%;
+}
+
+.facebookIcon {
+    width: 7%;
+}
+
+.instagramIcon {
+    width: 7%;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}

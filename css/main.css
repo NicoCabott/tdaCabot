@@ -55,7 +55,15 @@ footer{
     width: 7%;
 }
 
+
+nav{
+    position: fixed;
+    z-index: 100;
+}
+
+
 nav ul li a:hover {
     border-bottom: 2px solid black;
     font-weight: bold;
 }
+

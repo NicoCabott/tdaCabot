@@ -1,69 +1,209 @@
-.logoHonguito{
-    width: 30%;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-.foto1 {
-    width: 40%;
-}
+body {
+  font-family: 'Roboto', sans-serif; }
 
+/* propiedades del padre */
+.contenedor {
+  padding: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
-.foto2 {
-    width: 40%;
-}
+header {
+  grid-area: header;
+  background-image: linear-gradient(#CCA77Aff, #e6b67e);
+  text-align: center;
+  position: sticky;
+  top: 0; }
+  header nav {
+    background-color: #F9E8D5ff;
+    padding: 1.5rem; }
+    header nav ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none; }
+      header nav ul li a {
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid black;
+        padding: 0.5rem; }
+        header nav ul li a:hover {
+          border-bottom: 2px solid black;
+          font-weight: bold; }
 
-.foto3{
-    width: 40%;
-    margin: 1rem;
-}
-
-.foto4 {
-    width: 40%;
-    margin: 1rem;
-}
-
-.foto5 {
-    width: 40%;
-    margin: 1rem;
-}
-
-
-header{
+main {
+  grid-area: main;
+  background-color: beige; }
+  main h1 {
+    margin: 0.5rem;
+    padding: 0.5rem; }
+  main h2 {
+    margin: 0.5rem;
+    padding: 0.5rem; }
+  main h3 {
+    text-align: center;
+    margin: 3rem;
+    text-decoration: underline; }
+  main h5 {
+    text-decoration: double; }
+  main .divHeader {
+    display: flex;
     background-color: #CCA77Aff;
-}
+    flex-direction: column;
+    text-align: center; }
+    main .divHeader .logoHonguito {
+      width: 10%;
+      padding: 0.5rem;
+      text-align: center;
+      align-self: center; }
+  main .section1 {
+    display: flex;
+    justify-content: space-evenly; }
+    main .section1 .foto1 {
+      width: 40%; }
+    main .section1 .foto2 {
+      width: 40%; }
 
-hr {
+/*ceramicas*/
+.contenedorProductos {
+  text-align: center;
+  margin-left: 18rem;
+  margin-right: 18rem;
+  padding: 1rem; }
+  .contenedorProductos .foto3 {
+    width: 75%;
+    padding: 1rem; }
+  .contenedorProductos .foto4 {
+    width: 75%;
+    padding: 1rem; }
+  .contenedorProductos .foto8 {
+    width: 75%;
+    padding: 1rem; }
+  .contenedorProductos hr {
     margin-bottom: 1rem;
     margin-top: 1rem;
-    border: 1px solid black;
-    color: black;
-}
+    border: 1px solid black; }
 
-footer{
-    background-color: #CCA77Aff;
-}
+/*cuadritos*/
+.foto6 {
+  width: 75%;
+  padding: 1rem; }
 
+.foto7 {
+  width: 75%;
+  padding: 1rem; }
 
-.twitterIcon{
-    width: 7%;
-}
+/* sobre mi*/
+.mainSobreMi {
+  margin: 3rem; }
+  .mainSobreMi .divSobreMi {
+    display: flex; }
+  .mainSobreMi .pSobreMi {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem; }
+    .mainSobreMi .pSobreMi p {
+      padding: 2rem; }
+    .mainSobreMi .pSobreMi img {
+      border-radius: 50px; }
+    .mainSobreMi .pSobreMi .foto9 {
+      width: 40%;
+      margin-right: 7rem; }
 
-.facebookIcon {
-    width: 7%;
-}
+/*contacto*/
+.mainContacto {
+  margin-left: 4rem;
+  margin-right: 4rem; }
+  .mainContacto p {
+    margin-left: 10rem;
+    margin-right: 10rem; }
 
-.instagramIcon {
-    width: 7%;
-}
+form fieldset {
+  border: none; }
 
+form div label {
+  padding: 2rem; }
 
-nav{
-    position: fixed;
-    z-index: 100;
-}
+/*footer */
+footer {
+  grid-area: footer;
+  background-image: linear-gradient(#CCA77Aff, #e6b67e);
+  text-align: center;
+  padding: 0.7rem; }
+  footer .divFooter {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding: 0; }
+    footer .divFooter .twitterIcon {
+      width: 15%;
+      padding: 0; }
+    footer .divFooter .facebookIcon {
+      width: 15%;
+      padding: 0; }
+    footer .divFooter .instagramIcon {
+      width: 15%;
+      padding: 0; }
 
+/* mediaquery tablet */
+@media only screen and (max-width: 600px) {
+  .contenedor {
+    height: 80;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "main main" "footer footer"; }
+  .logoHonguito {
+    width: 40%;
+    padding: 0.5rem; }
+  .section1 {
+    display: block; }
+    .section1 .foto1 {
+      width: 100%;
+      padding: 1rem; }
+    .section1 .foto2 {
+      width: 100%;
+      padding: 1rem; }
+    .section1 h3 {
+      margin: 1rem; }
+  /*ceramicas*/
+  .contenedorProductos {
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+  /* sobre mi */
+  .divSobreMi {
+    display: block;
+    text-align: center; }
+    .divSobreMi .foto9 {
+      text-align: center;
+      margin: 0;
+      width: 60%; }
+    .divSobreMi .pSobreMi {
+      padding: 1rem;
+      margin: 1rem; } }
 
-nav ul li a:hover {
-    border-bottom: 2px solid black;
-    font-weight: bold;
-}
-
+@media only screen and (max-width: 600px) and (max-width: 360px) {
+  .contenedor {
+    height: 80;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "main main" "footer footer"; }
+  .logoHonguito {
+    width: 40%;
+    padding: 0rem; }
+  nav {
+    font-size: 6 0%; }
+  .divFooter {
+    display: flex;
+    justify-content: space-around; }
+  /* sobre mi */
+  .mainSobreMi {
+    margin: 0; } }

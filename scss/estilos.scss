@@ -29,7 +29,7 @@ $navABorderHover: (
 
 // extend
 
-%bg-color {
+%extend bg-color {
     background-image: linear-gradient(#CCA77Aff, #e6b67e);
 }
 
@@ -54,7 +54,7 @@ $navABorderHover: (
 
 header {
     grid-area: header;
-    @extend %bg-color;
+    @extend bg-color;
     text-align: center;
     position: sticky;
     top: 0;
@@ -229,7 +229,7 @@ form{
 
 footer {
     grid-area: footer;
-    @extend %bg-color;
+    @extend bg-color;
     text-align: center;
     padding: 0.7rem;
     .divFooter {

@@ -8,6 +8,33 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+// mixin
+
+@mixin marginPadding ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+
+// mapas
+
+$navABorder: ( 
+    border: 1px solid black,
+);
+
+
+$navABorderHover: (
+    border: 2px solid black,
+);
+
+// extend
+
+%bg-color {
+    background-image: linear-gradient(#CCA77Aff, #e6b67e);
+}
+
+
+
 
 /* propiedades del padre */
 .contenedor {
@@ -27,7 +54,7 @@ body {
 
 header {
     grid-area: header;
-    background-image: linear-gradient(#CCA77Aff, #e6b67e);
+    @extend %bg-color;
     text-align: center;
     position: sticky;
     top: 0;
@@ -44,11 +71,11 @@ header {
                 a {
                     text-decoration: none;
                     color: black;
-                    border-bottom: 1px solid black;
+                    border-bottom: map-get($map: $navAborder, $key:border );
                     padding: 0.5rem;
     
                     &:hover {
-                        border-bottom: 2px solid black;
+                        border-bottom: map-get($map: $navAbordeHoverr, $key:border);
                         font-weight: bold;
                     }
                 }
@@ -66,12 +93,10 @@ main {
     grid-area: main;
     background-color: beige;
     h1 {
-        margin: 0.5rem;
-        padding: 0.5rem;
+        @include marginPadding(0.5, 0.5)
     }
     h2 {
-        margin: 0.5rem;
-        padding: 0.5rem;
+        @include marginPadding(0.5, 0.5)
     }
     h3 {
         text-align: center;
@@ -204,7 +229,7 @@ form{
 
 footer {
     grid-area: footer;
-    background-image: linear-gradient(#CCA77Aff, #e6b67e);
+    @extend %bg-color;
     text-align: center;
     padding: 0.7rem;
     .divFooter {
@@ -326,8 +351,6 @@ footer {
         }    
     }
 }
-
-
 
 
 
